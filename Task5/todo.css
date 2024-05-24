@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color:white;
+  text-shadow: 5px 5px 5px rgb(90, 31, 40);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container{
+  border-radius: 3%;
+}
+#zoomInBtn,
+#zoomOutBtn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  height: 5vh;
+  width: 6vh;
+  background-color:bisque;
+  color:black;
+}
+
+#zoomOutBtn {
+  margin-left: 8vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(238, 123, 142);
+}
+
+#inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#taskInput {
+  margin-right: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#dateInput {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: bisque;
+  /* color:white; */
+}
+
+#searchInput {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+#tasksFilters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(99, 3, 3);
+  color: white;
+}
+#taskTable{
+  border:none;
+}
+
+table {
+  width: 100%;
+ border: none;
+  max-width: 600px;
+  border-collapse: collapse;
+  border-color:bisque;
+  margin-bottom: 20px;
+  background-color: bisque;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.dltBtn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.dltBtn:hover {
+  background-color: #ff1a1a;
+}
+
+@media screen and (max-width: 768px) {
+  #zoomInBtn,
+  #zoomOutBtn {
+    font-size: 14px;
+    height: 4vh;
+    width: 5vh;
+  }
+
+  #zoomOutBtn {
+    margin-left: 6vh;
+  }
+
+  #searchInput {
+    max-width: 200px;
+  }
+}

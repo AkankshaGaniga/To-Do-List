@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="./todo.css">
+</head>
+<body>
+  <button id="zoomInBtn">+</button>
+  <button id="zoomOutBtn">-</button>
+
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div id="box">
+      <input type="text" id="taskInput" placeholder="Add a new task">
+      <input type="date" onchange="displayTasksByDate()" id="dateInput">
+      <button onclick="addTask()" class="btn">ADD</button>
+      <input type="text" id="searchInput" placeholder="Search tasks" onkeyup="searchTasks()">
+      <br><br>
+      <button onclick="displayCompletedTasks()" id="cmptdtsk">Completed Tasks</button>
+      <button onclick="displayPendingTasks()" id="pndtsk">Pending Tasks</button>
+      
+<input type="date" id="dateFilter"> 
+<!-- <button id="dateFilter" onclick="displayTasksByDate()">Filter</button> -->
+
+      <table border="none" id="taskTable">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Completed</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="taskList"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./todo.js"></script>
+</body>
+</html>
